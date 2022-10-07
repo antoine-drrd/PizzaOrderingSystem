@@ -131,9 +131,15 @@ def push_postal_codes():
         conn.execute(f"INSERT INTO postal_code (postal_code) VALUES ({code})")
 
 
+def push_delivery_persons():
+    for code in range(1000, 2001):
+        conn.execute(f"INSERT INTO delivery_person (postal_code, status, left_at) VALUES ({code}, 'available', null)")
+
+
 if __name__ == '__main__':
     # push_ingredients()
     # push_pizza_list()
     # push_drinks_deserts()
     # push_pizzas_link()
-    push_postal_codes()
+    # push_postal_codes()
+    push_delivery_persons()

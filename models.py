@@ -75,6 +75,7 @@ class DeliveryPerson(Base):
     postal_code = Column(ForeignKey('postal_code.postal_code'), index=True)
     status = Column(String(20))
     left_at = Column(TIMESTAMP)
+    in_queue = Column(Integer)
 
     postal_code1 = relationship('PostalCode')
 
@@ -89,8 +90,9 @@ t_ingredient_pizzas = Table(
 class OrderList(Base):
     __tablename__ = 'order_list'
 
-    order_id = Column(Integer, primary_key=True)
+    order_id = Column(Integer, primary_key=True, autoincrement=True)
     customer_id = Column(ForeignKey('customer.customer_id'), index=True)
+    ordered_at = Column(TIMESTAMP)
 
     customer = relationship('Customer')
     pizzas = relationship('Pizza', secondary='order_pizza')
