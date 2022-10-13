@@ -1,7 +1,12 @@
+"""
+ Group 22
+ Aurélien Giuglaris Michael & Antoine Dorard
+ i6279204 & i6269522
+"""
 from functions import query_menu_desert, query_menu_pizza, query_menu_drink
 
 class Menus:
-    def __init__(self):  # <-- What a supreme bullshit
+    def __init__(self):
         self.menu_pizzas = {}
         self.menu_drinks = {}
         self.menu_deserts = {}

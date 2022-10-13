@@ -1,3 +1,8 @@
+"""
+ Group 22
+ Aurélien Giuglaris Michael & Antoine Dorard
+ i6279204 & i6269522
+"""
 import sqlalchemy as sqla
 from sqlalchemy.orm import sessionmaker
 

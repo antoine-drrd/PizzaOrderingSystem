@@ -1,3 +1,8 @@
+"""
+ Group 22
+ Aurélien Giuglaris Michael & Antoine Dorard
+ i6279204 & i6269522
+"""
 from database import conn, session
 from models import t_ingredient_pizzas, OrderList, Drink, Ingredient
 

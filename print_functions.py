@@ -1,3 +1,8 @@
+"""
+ Group 22
+ Aurélien Giuglaris Michael & Antoine Dorard
+ i6279204 & i6269522
+"""
 import math
 import os
 
@@ -56,8 +61,11 @@ def print_menu_drinks():
     menu = menus.get_menu_drinks()
     cons.print(medium_sep)
 
-    for drink in menu.values():
-        cons.print("[#28d5ff]"+drink.get("name")+"[/#28d5ff]   [green]"+str(round(drink.get("price"), 2))+"[/green]")
+    for id, drink in menu.items():
+        id_string = str(id)
+        if id < 10:
+            id_string = " "+str(id)
+        cons.print(id_string + " ▬ [#28d5ff]"+drink.get("name")+"[/#28d5ff]   [green]"+str(round(drink.get("price"), 2))+"[/green]")
         print()
 
 
@@ -65,6 +73,9 @@ def print_menu_deserts():
     menu = menus.get_menu_deserts()
     cons.print(medium_sep)
 
-    for desert in menu.values():
-        cons.print("[#e0a900]"+desert.get("name")+"[/#e0a900]   [green]"+str(round(desert.get("price"), 2))+"[/green]")
+    for id, desert in menu.items():
+        id_string = str(id)
+        if id < 10:
+            id_string = " "+str(id)
+        cons.print(id_string + " ▬ [#e0a900]"+desert.get("name")+"[/#e0a900]   [green]"+str(round(desert.get("price"), 2))+"[/green]")
         print()

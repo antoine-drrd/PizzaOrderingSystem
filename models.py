@@ -1,3 +1,8 @@
+"""
+ Group 22
+ Aurélien Giuglaris Michael & Antoine Dorard
+ i6279204 & i6269522
+"""
 from sqlalchemy import Column, Integer, String, Text, Table, ForeignKey, Boolean
 from sqlalchemy.dialects.mysql import TIMESTAMP
 from sqlalchemy.ext.declarative import declarative_base
